@@ -23,11 +23,12 @@
 }
 
 .tag-p {
-  margin-right: 42%;
+  margin-right: 39%;
 }
 .btn {
   height: 55px;
-  width: 130px;
+  width: 150px;
+  font-weight: 600;
   margin: 5px;
   color: var(--brand-colors-bg-color-primary, #003057);
   display: flex;
@@ -36,7 +37,7 @@
 }
 
 .icon {
-  margin-right: 5px;
+  margin: 0px 6px 0 6px;
   font-size: 1.5rem;
 }
 
