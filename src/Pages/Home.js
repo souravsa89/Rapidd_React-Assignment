@@ -35,20 +35,23 @@ const Home = () => {
         <div className="div-left">
           <div className="div-left-top">
             <img
+              className="img"
               src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
               alt="img"
-              style={{ height: "398px", width: "100%" }}
+              // style={{ height: "398px", width: "100%" }}
             />
           </div>
           <div className="div-left-bottom">
-            <h3>
-              {" "}
-              <AiOutlineLink /> lorem ipsum{" "}
-            </h3>
-            <h3>
-              {" "}
-              <AiOutlineLink /> lorem ipsum{" "}
-            </h3>
+            <div className="div-left-link">
+              <h3>
+                {" "}
+                <AiOutlineLink /> lorem ipsum{" "}
+              </h3>
+              <h3>
+                {" "}
+                <AiOutlineLink /> lorem ipsum{" "}
+              </h3>
+            </div>
             <h3>
               {" "}
               <AiOutlineLink /> lorem ipsum{" "}
