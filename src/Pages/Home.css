@@ -1,0 +1,132 @@
+.top-div {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 10px 100px;
+}
+
+.top {
+  display: flex;
+  /* align-items: centre; */
+  justify-content: center;
+  font-size: 30px;
+  color: var(--brand-colors-bg-color-primary, #003057);
+}
+
+.bold1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag-p {
+  margin-right: 42%;
+}
+.btn {
+  height: 55px;
+  width: 130px;
+  margin: 5px;
+  color: var(--brand-colors-bg-color-primary, #003057);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 24px;
+  background-color: #f9f9f9;
+}
+
+.div-left {
+  display: flex;
+  width: 708px;
+  align-items: center;
+  /* gap: 24px; */
+  margin-left: 100px;
+  flex-direction: column;
+}
+
+.div-left-top {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  align-self: stretch;
+  /* border: 1px solid black; */
+}
+
+.div-left-bottom {
+  display: flex;
+  /* padding: 24px; */
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.div-right {
+  width: 708px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.div-top-right {
+  margin-top: 10px;
+  display: flex;
+  /* padding: 2px; */
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  /* flex: 1 0 0; */
+  /* align-self: stretch; */
+}
+
+.bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tag {
+  color: var(--brand-colors-bg-color-primary, #003057);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.div-mid-right {
+  margin-top: 25px;
+}
+
+.div-bottom-right {
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.btn2 {
+  height: 37px;
+  width: 155px;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  border-radius: 48px;
+  background: var(--brand-colors-bg-color-primary, #003057);
+  color: white;
+}
