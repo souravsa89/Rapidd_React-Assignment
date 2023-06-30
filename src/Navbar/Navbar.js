@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { IoMdArrowDropdown } from "react-icons/io";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -15,6 +16,12 @@ const Navbar = () => {
     setActiveMobileMenu(false);
   };
 
+  const handleDropdownToggle = (index) => {
+    const dropdownId = `dropdown-${index}`;
+    const dropdownElement = document.getElementById(dropdownId);
+    dropdownElement.classList.toggle("active");
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -26,15 +33,23 @@ const Navbar = () => {
           onClick={handleMobileMenuToggle}
         >
           {activeMobileMenu ? (
-            <ImCross icon={ImCross} style={{ fontSize: "20px" }} />
+            <ImCross
+              icon={ImCross}
+              style={{ fontSize: "25px", color: "white" }}
+            />
           ) : (
-            <FaBars icon={FaBars} style={{ fontSize: "20px" }} />
+            <FaBars
+              icon={FaBars}
+              style={{ fontSize: "25px", color: "white" }}
+            />
           )}
         </div>
         <ul className={`nav-menu ${activeMobileMenu ? "active" : ""}`}>
           <li className="nav-item">
-            <div className="nav-link">Option 1</div>
-            <div className="dropdown">
+            <div className="nav-link" onClick={() => handleDropdownToggle(1)}>
+              Option 1 {activeMobileMenu && <IoMdArrowDropdown />}
+            </div>
+            <div id="dropdown-1" className="dropdown">
               <div className="column">
                 <h3>Column 1</h3>
                 <Link
@@ -72,8 +87,10 @@ const Navbar = () => {
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link">Option 2</div>
-            <div className="dropdown">
+            <div className="nav-link" onClick={() => handleDropdownToggle(2)}>
+              Option 2 {activeMobileMenu && <IoMdArrowDropdown />}
+            </div>
+            <div id="dropdown-2" className="dropdown">
               <div className="column">
                 <h3>Column 1</h3>
                 <Link
@@ -111,8 +128,10 @@ const Navbar = () => {
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link">Option 3</div>
-            <div className="dropdown">
+            <div className="nav-link" onClick={() => handleDropdownToggle(3)}>
+              Option 3 {activeMobileMenu && <IoMdArrowDropdown />}
+            </div>
+            <div id="dropdown-3" className="dropdown">
               <div className="column">
                 <h3>Column 1</h3>
                 <Link
@@ -150,8 +169,10 @@ const Navbar = () => {
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link">Option 4</div>
-            <div className="dropdown">
+            <div className="nav-link" onClick={() => handleDropdownToggle(4)}>
+              Option 4 {activeMobileMenu && <IoMdArrowDropdown />}
+            </div>
+            <div id="dropdown-4" className="dropdown">
               <div className="column">
                 <h3>Column 1</h3>
                 <Link
