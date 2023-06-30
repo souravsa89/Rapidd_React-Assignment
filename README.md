@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+// I am Sourav Sakhari. A Frontend Developer.
+// https://github.com/souravsa89
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
