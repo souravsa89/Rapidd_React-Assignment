@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleMobileMenuToggle = () => {
     setActiveMobileMenu(!activeMobileMenu);
@@ -33,21 +45,21 @@ const Navbar = () => {
           onClick={handleMobileMenuToggle}
         >
           {activeMobileMenu ? (
-            <ImCross
-              icon={ImCross}
-              style={{ fontSize: "25px", color: "white" }}
-            />
+            <ImCross icon={ImCross} style={{ fontSize: "20px" }} />
           ) : (
-            <FaBars
-              icon={FaBars}
-              style={{ fontSize: "25px", color: "white" }}
-            />
+            <FaBars icon={FaBars} style={{ fontSize: "20px" }} />
           )}
         </div>
         <ul className={`nav-menu ${activeMobileMenu ? "active" : ""}`}>
           <li className="nav-item">
             <div className="nav-link" onClick={() => handleDropdownToggle(1)}>
-              Option 1 {activeMobileMenu && <IoMdArrowDropdown />}
+              Option 1{" "}
+              {windowWidth <= 768 &&
+                (activeMobileMenu ? (
+                  <IoMdArrowDropdown />
+                ) : (
+                  <IoMdArrowDropup />
+                ))}
             </div>
             <div id="dropdown-1" className="dropdown">
               <div className="column">
@@ -88,7 +100,13 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <div className="nav-link" onClick={() => handleDropdownToggle(2)}>
-              Option 2 {activeMobileMenu && <IoMdArrowDropdown />}
+              Option 2{" "}
+              {windowWidth <= 768 &&
+                (activeMobileMenu ? (
+                  <IoMdArrowDropdown />
+                ) : (
+                  <IoMdArrowDropup />
+                ))}
             </div>
             <div id="dropdown-2" className="dropdown">
               <div className="column">
@@ -129,7 +147,13 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <div className="nav-link" onClick={() => handleDropdownToggle(3)}>
-              Option 3 {activeMobileMenu && <IoMdArrowDropdown />}
+              Option 3{" "}
+              {windowWidth <= 768 &&
+                (activeMobileMenu ? (
+                  <IoMdArrowDropdown />
+                ) : (
+                  <IoMdArrowDropup />
+                ))}
             </div>
             <div id="dropdown-3" className="dropdown">
               <div className="column">
@@ -170,7 +194,13 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <div className="nav-link" onClick={() => handleDropdownToggle(4)}>
-              Option 4 {activeMobileMenu && <IoMdArrowDropdown />}
+              Option 4{" "}
+              {windowWidth <= 768 &&
+                (activeMobileMenu ? (
+                  <IoMdArrowDropdown />
+                ) : (
+                  <IoMdArrowDropup />
+                ))}
             </div>
             <div id="dropdown-4" className="dropdown">
               <div className="column">
@@ -203,6 +233,7 @@ const Navbar = () => {
                   to="/page16"
                   className="dropdown-link"
                   onClick={closeMobileMenu}
+                  y
                 >
                   Page 16
                 </Link>
