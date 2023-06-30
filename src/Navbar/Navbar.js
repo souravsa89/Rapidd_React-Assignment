@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -23,9 +25,11 @@ const Navbar = () => {
           className={`menu-icon ${activeMobileMenu ? "active" : ""}`}
           onClick={handleMobileMenuToggle}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {activeMobileMenu ? (
+            <ImCross icon={ImCross} style={{ fontSize: "20px" }} />
+          ) : (
+            <FaBars icon={FaBars} style={{ fontSize: "20px" }} />
+          )}
         </div>
         <ul className={`nav-menu ${activeMobileMenu ? "active" : ""}`}>
           <li className="nav-item">
@@ -166,7 +170,21 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="column">
-                {/* Add your links for Option 4 - Column 2 here */}
+                <h3>Column 2</h3>
+                <Link
+                  to="/page15"
+                  className="dropdown-link"
+                  onClick={closeMobileMenu}
+                >
+                  Page 15
+                </Link>
+                <Link
+                  to="/page16"
+                  className="dropdown-link"
+                  onClick={closeMobileMenu}
+                >
+                  Page 16
+                </Link>
               </div>
             </div>
           </li>
