@@ -56,10 +56,11 @@
 .dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  display: none;
-  flex-direction: column;
+  left: 0px;
+
+  flex-direction: row;
   align-items: flex-start;
+
   width: 200px;
   background-color: #f0f0f0;
   padding: 1rem;
@@ -78,6 +79,7 @@
 .dropdown .column {
   display: flex;
   flex-direction: column;
+  padding-right: 1rem;
 }
 
 .dropdown .column h3 {
@@ -97,6 +99,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   .navbar {
     background: var(--brand-colors-bg-color-primary, #003057);
   }
@@ -134,19 +141,21 @@
     position: fixed;
     top: 60px;
     left: 0;
-    width: 92%;
+    width: 93%;
     background-color: white;
     padding: 1rem;
     z-index: 99;
     opacity: 100;
-    transform: translateY(0%);
+    background-color: #f0f0f0;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* transform: translateY(0%); */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
-  .nav-menu.active.visible {
+  /* .nav-menu.active.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+  } */
 
   .nav-item {
     margin-right: 0;
@@ -154,8 +163,9 @@
 
   .nav-link {
     display: block;
-    padding: 0.5rem;
-    background-color: white;
+    /* padding: 0.5rem; */
+    background-color: #f0f0f0;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     text-align: start;
     margin-right: 270px;
     width: 100%;
@@ -163,7 +173,8 @@
 
   .dropdown {
     position: static;
-    display: none;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: 1rem;
     padding: 0;
