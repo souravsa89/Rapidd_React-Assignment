@@ -47,21 +47,24 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: color 0.3s;
+  font-weight: 600;
 }
 
 .nav-link:hover {
-  color: #ccc;
+  color: #003057;
+  background-color: #e6e2e2;
 }
 
 .dropdown {
   position: absolute;
   top: 100%;
   left: 0px;
+  right: 0px;
 
   flex-direction: row;
   align-items: flex-start;
 
-  width: 200px;
+  width: 300px;
   background-color: #f0f0f0;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -98,10 +101,6 @@
   display: none;
 }
 
-.IoMdArrowDropup {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
   * {
     margin: 0;
@@ -115,10 +114,6 @@
     justify-content: space-between;
     margin: 12px 0px;
   }
-
-  /* navbar-logo {
-    margin-right: 30px !important;
-  } */
 
   .nav-menu {
     display: none;
@@ -145,21 +140,16 @@
     position: fixed;
     top: 60px;
     left: 0;
-    width: 93%;
+    width: 100%;
     background-color: white;
     padding: 1rem;
     z-index: 99;
     opacity: 100;
     background-color: #f0f0f0;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-    /* transform: translateY(0%); */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0px);
+    transition: opacity 0.3s, transform 0.3s;
+    padding-left: 0;
   }
-
-  /* .nav-menu.active.visible {
-    opacity: 1;
-    transform: translateY(0);
-  } */
 
   .nav-item {
     margin-right: 0;
@@ -167,9 +157,7 @@
 
   .nav-link {
     display: block;
-    /* padding: 0.5rem; */
     background-color: #f0f0f0;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     text-align: start;
     margin-right: 270px;
     width: 100%;
@@ -212,6 +200,7 @@
     text-align: start;
   }
   .column {
-    width: 100%;
+    width: 90%;
+    padding-left: 0.75rem;
   }
 }

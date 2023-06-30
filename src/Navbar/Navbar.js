@@ -45,9 +45,15 @@ const Navbar = () => {
           onClick={handleMobileMenuToggle}
         >
           {activeMobileMenu ? (
-            <ImCross icon={ImCross} style={{ fontSize: "20px" }} />
+            <ImCross
+              icon={ImCross}
+              style={{ fontSize: "25px", color: "white" }}
+            />
           ) : (
-            <FaBars icon={FaBars} style={{ fontSize: "20px" }} />
+            <FaBars
+              icon={FaBars}
+              style={{ fontSize: "25px", color: "white" }}
+            />
           )}
         </div>
         <ul className={`nav-menu ${activeMobileMenu ? "active" : ""}`}>
@@ -233,7 +239,6 @@ const Navbar = () => {
                   to="/page16"
                   className="dropdown-link"
                   onClick={closeMobileMenu}
-                  y
                 >
                   Page 16
                 </Link>
